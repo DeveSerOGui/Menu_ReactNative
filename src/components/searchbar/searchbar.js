@@ -19,7 +19,7 @@ const SearchBar = () => {
       <View style={styles.container}>
         <Searchbar
           style={styles.searchBarStyle}
-          placeholder="Search"
+          placeholder="Buscar"
           onChangeText={setSearchQuery}
           value={searchQuery}
         />
