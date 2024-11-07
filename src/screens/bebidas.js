@@ -1,10 +1,17 @@
-import { View } from "react-native"
+import { View, Text, ScrollView } from "react-native"
 import SearchBar from "../components/searchbar/searchbar"
+import styles from "./style"
+import NoalcoholDrinks from "../components/foodcard/noalcoohol"
+import AlcoholDrinks from "../components/foodcard/alcoohol"
 
 export default function Bebidas(){
     return(
-        <View style={{flex:1, justifyContent: 'center', alignContent:'center', padding:32}}>
-            <SearchBar/>
-        </View>
+        <ScrollView style={styles.container}> 
+            <SearchBar style={styles.seachBar}/>
+            <Text style={styles.titulos}>Bebidas não acoólicas</Text>
+            <NoalcoholDrinks/>
+            <Text style={styles.titulos}>Bebidas acoólicas</Text>
+            <AlcoholDrinks/>
+        </ScrollView>
     )
 }
