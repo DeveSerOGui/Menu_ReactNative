@@ -5,6 +5,8 @@ import Pizzas from '../screens/pizzas';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Entypo from '@expo/vector-icons/Entypo'
 
+  
+
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function Routes() {
@@ -12,11 +14,13 @@ export function Routes() {
         <NavigationContainer>
             <Navigator
                 screenOptions={{
-                    tabBarActiveTintColor: 'green',
+                    tabBarActiveTintColor: '#439660',
                     headerShown: false
                 }}
             >
+                
                 <Screen
+
                     name="Bebidas"
                     component={Bebidas}
                     options={{
