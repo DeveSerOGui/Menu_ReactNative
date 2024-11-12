@@ -7,25 +7,27 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         alignItems: 'center',
     },
+    touchableContainer: {
+        width: '45%',
+        margin: 1,
+    },
     cardView: {
-        margin: 5,
         marginLeft: 10,
         padding: 10,
-        width: '45%',
+        width: '95%',
         height: 180,
         backgroundColor: '#FFFFFF',
     },
 
     imgFood: {
-        width: 75, 
+        width: 75,
         height: 75,
         padding: 5,
         margin: 5,
-        backgroundColor: '#FFFFFF'  
+        backgroundColor: '#FFFFFF'
     },
-    textCard:{
+    textCard: {
         fontSize: 16,
-        
     }
 });
 
