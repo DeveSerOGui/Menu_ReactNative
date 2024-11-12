@@ -1,47 +1,53 @@
+import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Bebidas from '../screens/bebidas';
 import Pizzas from '../screens/pizzas';
+import CocaCola from '../screens/detailsPage/detailsBebidas/cocacola';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import Entypo from '@expo/vector-icons/Entypo'
+import Entypo from '@expo/vector-icons/Entypo';
 
-  
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
-const { Navigator, Screen } = createBottomTabNavigator();
+function BebidasStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Bebidas" component={Bebidas} />
+      <Stack.Screen name="CocaCola" component={CocaCola} options={{ title: 'Detalhes da Coca-Cola' }}/>
+    </Stack.Navigator>
+  );
+}
 
 export function Routes() {
-    return (
-        <NavigationContainer>
-            <Navigator
-                screenOptions={{
-                    tabBarActiveTintColor: '#439660',
-                    headerShown: false
-                }}
-            >
-                
-                <Screen
-
-                    name="Bebidas"
-                    component={Bebidas}
-                    options={{
-                        tabBarIcon: ({ size, color }) =>
-                            <Entypo name='drink'
-                                size={size}
-                                color={color} />
-                    }}
-                />
-                <Screen
-                    name="Pizzas"
-                    component={Pizzas}
-                    options={{
-                        tabBarIcon: ({ size, color }) =>
-                            <Ionicons name='pizza-outline'
-                                size={size}
-                                color={color}
-                            />
-                    }}
-                />
-            </Navigator>
-        </NavigationContainer>
-    );
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: '#439660',
+          headerShown: false,
+        }}
+      >
+        <Tab.Screen
+          name="Bebidas"
+          component={BebidasStack}
+          options={{
+            tabBarIcon: ({ size, color }) => (
+              <Entypo name="drink" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Pizzas"
+          component={Pizzas}
+          options={{
+            tabBarIcon: ({ size, color }) => (
+              <Ionicons name="pizza-outline" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
 }
