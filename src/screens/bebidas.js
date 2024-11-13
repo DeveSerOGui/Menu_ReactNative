@@ -1,8 +1,8 @@
 import { View, Text, ScrollView } from "react-native"
 import SearchBar from "../components/searchbar/searchbar"
 import styles from "./style"
-import NoalcoholDrinks from "../components/foodcard/noalcoohol"
-import AlcoholDrinks from "../components/foodcard/alcoohol"
+import NoalcoholDrinks from "../components/cards/noalcoohol"
+import AlcoholDrinks from "../components/cards/alcoohol"
 
 export default function Bebidas(){
     return(
