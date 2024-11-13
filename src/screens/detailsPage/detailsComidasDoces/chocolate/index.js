@@ -1,11 +1,11 @@
 import React from 'react'
 import { Text, View  } from 'react-native'
 
-export default function QuatroQuejosDetails() {
+export default function ChocolateDetails() {
     return (
         <View>
             <Text>
-                Detalhe Quatro Queijos
+                Detalhe Chocolate
             </Text>
         </View>
     )
