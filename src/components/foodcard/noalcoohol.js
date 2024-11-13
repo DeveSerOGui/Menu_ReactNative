@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Card } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { View, TouchableOpacity } from 'react-native';
+import MateLeaoDetails from '../../screens/detailsPage/detailsBebidas/mateleao';
+import CocaColaDetails from '../../screens/detailsPage/detailsBebidas/cocacola';
 import styles from './style';
 
 const NoalcoholDrinks = () => {
@@ -9,7 +11,7 @@ const NoalcoholDrinks = () => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('CocaCola')} style={styles.touchableContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate(CocaColaDetails)} style={styles.touchableContainer}>
                 <Card style={styles.cardView}>
                     <Card.Title title="Coca-Cola" subtitle="350ml" />
                     <Card.Cover
@@ -21,7 +23,7 @@ const NoalcoholDrinks = () => {
                 </Card>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('DetailsCoca')} style={styles.touchableContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate(MateLeaoDetails)} style={styles.touchableContainer}>
                 <Card style={styles.cardView}>
                     <Card.Title title="Mate Leão" subtitle="300ml" />
                     <Card.Cover
